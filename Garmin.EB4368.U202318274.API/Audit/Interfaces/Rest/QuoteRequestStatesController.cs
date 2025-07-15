@@ -16,7 +16,7 @@ public class QuoteRequestStatesController(
     IQuoteRequestStateQueryService quoteRequestStateQueryService
 ) : ControllerBase
 {
-    [HttpPost]
+    [HttpPost("{quoteRequestId}")]
     [SwaggerOperation(
         Summary = "Create a QuoteRequestState",
         Description = "Creates a new QuoteRequestState and returns the created QuoteRequestState Resource.",
@@ -24,10 +24,17 @@ public class QuoteRequestStatesController(
     [SwaggerResponse(StatusCodes.Status201Created, "Quote Request State created successfully",
         typeof(QuoteRequestStateResource))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Quote Request State could not be created")]
-    public async Task<IActionResult> CreateQuoteRequestState([FromBody] CreateQuoteRequestStateResource resource)
+    public async Task<IActionResult> CreateQuoteRequestState([FromBody] CreateQuoteRequestStateResource resource,
+        [FromRoute] Guid quoteRequestId)
     {
+        var exists = await quoteRequestStateCommandService
+            .ValidateQuoteRequestExistsAsync(quoteRequestId);
+
+        if (!exists)
+            return BadRequest("QuoteRequestId does not exist in Sales context");
+
         var createQuoteRequestStateCommand =
-            CreateQuoteRequestStateCommandFromResourceAssembler.ToCommandFromResource(resource);
+            CreateQuoteRequestStateCommandFromResourceAssembler.ToCommandFromResource(resource, quoteRequestId);
         var quoteRequestState = await quoteRequestStateCommandService.Handle(createQuoteRequestStateCommand);
         if (quoteRequestState is null) return BadRequest("quoteRequestState could not be created.");
         var quoteRequestStateResource =

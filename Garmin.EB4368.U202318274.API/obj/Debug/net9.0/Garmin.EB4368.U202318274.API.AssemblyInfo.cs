@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Garmin.EB4368.U202318274.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08030c0dff50fc28a93989c74ec0a8fe12f0d6f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Garmin.EB4368.U202318274.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Garmin.EB4368.U202318274.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -120,3 +120,4 @@ C:\Users\ASUS\Documents\University\Cycle5\applicationsWeb\1asi730-4368-web-appli
 C:\Users\ASUS\Documents\University\Cycle5\applicationsWeb\1asi730-4368-web-applications-EF-garmin\ebu202318274\Garmin.EB4368.U202318274.API\obj\Debug\net9.0\Garmin.EB4368.U202318274.API.pdb
 C:\Users\ASUS\Documents\University\Cycle5\applicationsWeb\1asi730-4368-web-applications-EF-garmin\ebu202318274\Garmin.EB4368.U202318274.API\obj\Debug\net9.0\Garmin.EB4368.U202318274.API.genruntimeconfig.cache
 C:\Users\ASUS\Documents\University\Cycle5\applicationsWeb\1asi730-4368-web-applications-EF-garmin\ebu202318274\Garmin.EB4368.U202318274.API\obj\Debug\net9.0\ref\Garmin.EB4368.U202318274.API.dll
+C:\Users\ASUS\Documents\University\Cycle5\applicationsWeb\1asi730-4368-web-applications-EF-garmin\ebu202318274\Garmin.EB4368.U202318274.API\obj\Debug\net9.0\Garmin.EB4368.U202318274.API.sourcelink.json

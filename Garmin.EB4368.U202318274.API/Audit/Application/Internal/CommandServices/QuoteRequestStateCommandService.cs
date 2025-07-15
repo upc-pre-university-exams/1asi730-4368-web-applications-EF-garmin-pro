@@ -79,4 +79,9 @@ public class QuoteRequestStateCommandService(
 
         return quoteRequestState;
     }
+
+    public async Task<bool> ValidateQuoteRequestExistsAsync(Guid quoteRequestId)
+    {
+        return await salesContextFacade.ExistQuoteRequestByQuoteRequestIdAsync(quoteRequestId);
+    }
 }

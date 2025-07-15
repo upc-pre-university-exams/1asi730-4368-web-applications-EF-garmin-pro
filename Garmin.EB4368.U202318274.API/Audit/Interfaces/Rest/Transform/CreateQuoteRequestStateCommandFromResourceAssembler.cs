@@ -6,10 +6,10 @@ namespace Garmin.EB4368.U202318274.API.Audit.Interfaces.Rest.Transform;
 
 public class CreateQuoteRequestStateCommandFromResourceAssembler
 {
-    public static CreateQuoteRequestStateCommand ToCommandFromResource(CreateQuoteRequestStateResource resource)
+    public static CreateQuoteRequestStateCommand ToCommandFromResource(CreateQuoteRequestStateResource resource, Guid quoteRequestId)
     {
         return new CreateQuoteRequestStateCommand(
-            resource.QuoteRequestId,
+            quoteRequestId,
             resource.Notes,
             resource.State,
             resource.Created
